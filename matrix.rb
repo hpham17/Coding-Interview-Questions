@@ -1,4 +1,6 @@
 require 'pp'
+#This question was BuildZoom's interview using Karat.
+
 # Given a matrix find the top-left corner and bottom-right corner or
 # find the top-left corner and the width and height of the rectangle
 # made of 0s
@@ -62,8 +64,9 @@ def find_top_left_and_width(matrix)
   result << width
 end
 
-# puts find_rectangle example2
+puts find_rectangle example2
 
+# Part 2
 # Harder: find all rectangles
 # Approach: A top-left corner is defined as having non-zero top and left neighbors
 
