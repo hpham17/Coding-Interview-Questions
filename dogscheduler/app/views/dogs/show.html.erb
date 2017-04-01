@@ -1,0 +1,13 @@
+<h1><%= @dog.name %>'s Profile Page</h1>
+
+<%= form_for(@event) do |f| %>
+  <%= f.label :event_type %>: <%= f.select :event_type, options_for_select([["Walk", "Walk"], ["Mealtime", "Mealtime"]], "Walk") %><br />
+  <div id="food"><%= f.label :food %>: <%= f.text_field :food %><br /></div>
+  <div id="location"><%= f.label :location %>: <%= f.text_field :location %><br /></div>
+<p>  Please make sure that the End Time is after the Start Time.</p>
+  <%= f.label :start_time %>: <%= f.datetime_local_field :start_time %><br />
+  <%= f.label :end_time %>: <%= f.datetime_local_field :end_time %><br />
+  <%= f.hidden_field :schedule_id, value: @schedule.id %>
+  <%= f.submit %>
+<% end %>
+<%= link_to "Request Schedule in JSON", dog_schedule_path(@dog.id) %>
