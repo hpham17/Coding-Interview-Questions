@@ -3,7 +3,7 @@ require 'pp'
 
 # Given a matrix find the top-left corner and bottom-right corner or
 # find the top-left corner and the width and height of the rectangle
-# made of 0s
+# made of 0's
 
 example = [
 [1,1,1,1,1],
